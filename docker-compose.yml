@@ -1,6 +1,4 @@
 web:
-  build: .
-  ports:
-      - "8080:80"
-  volumes:
-   - .:/code
+    image: hello_world:latest
+    ports:
+        - "127.0.0.1:8080:80"
