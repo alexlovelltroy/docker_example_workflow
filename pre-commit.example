@@ -1,0 +1,4 @@
+#!/bin/bash
+# Add this locally to your repo as .git/hooks/pre-commit and make sure it is executable
+# This does not actually get synced when you push to remote
+docker build -t "hello_world" . && docker images hello_world && echo "Docker built properly"
