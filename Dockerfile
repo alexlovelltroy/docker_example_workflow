@@ -16,6 +16,8 @@ ADD nginx.conf /etc/nginx/sites-enabled/hello.conf
 RUN mkdir /home/app/webapp
 COPY  passenger_node_test /home/app/webapp
 
+# To overlay your actual code onto the container look at the compose file
+
 
 # Clean up APT when done.
 RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
