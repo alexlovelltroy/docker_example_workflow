@@ -8,6 +8,8 @@ ENV HOME /root
 # Use baseimage-docker's init process.
 CMD ["/sbin/my_init"]
 
+RUN apt-get update && apt-get -y upgrade
+
 RUN rm /etc/nginx/sites-enabled/default
 ADD nginx.conf /etc/nginx/sites-enabled/hello.conf
 RUN mkdir /home/app/webapp
